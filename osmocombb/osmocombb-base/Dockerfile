@@ -12,7 +12,7 @@ RUN apt-get install -y git subversion build-essential axel wget make automake1.1
 RUN apt-get install -y libtool shtool automake autoconf git-core pkg-config make gcc
 
 # ---
-RUN git clone git clone git://git.osmocom.org/osmocom-bb.git
+RUN git clone git://git.osmocom.org/osmocom-bb.git
 RUN cd osmocom-bb/src && make
 
 # ---
