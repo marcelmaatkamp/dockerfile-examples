@@ -13,12 +13,6 @@ RUN update-rc.d docker.io defaults
 RUN apt-get install -y --no-install-recommends supervisor
 ADD conf/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 
-# jenkins
-USER jenkins
-ENV JENKINS_HOME /var/jenkins_home
-ENV JENKINS_PREFIX /
-
-USER root
 CMD ["/usr/bin/supervisord"]
 
 EXPOSE 8080
